@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """ Starts a Flash Web Application """
+import MySQLdb
+import _mysql
 from models import storage
 from models.state import State
 from models.city import City
@@ -19,7 +21,7 @@ def close_db(error):
     storage.close()
 
 
-@app.route('/0-hbnb/', strict_slashes=False)
+@app.route('/0-hbnb', strict_slashes=False)
 def hbnb():
     """ HBNB is alive! """
     states = storage.all(State).values()
