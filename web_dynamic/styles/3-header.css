@@ -17,3 +17,6 @@ header .logo {
 	background-color: #CCCCCC;
 	margin-right: 30px;
 }
+#api_status.available {
+    background-color: #FF545F;
+}
